@@ -1,0 +1,202 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio Técnico de Computadoras</title>
+  <style>
+    /* --- Estilos generales --- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    /* --- Encabezado --- */
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      margin-top: 12px;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Banner destacado --- */
+    .banner {
+      background: #fffae6;
+      padding: 30px 15px;
+      text-align: center;
+      border-bottom: 2px solid #f0d000;
+    }
+    .banner h2 {
+      color: #d48806;
+      margin: 0;
+      font-size: 1.8em;
+    }
+    .banner p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* --- Secciones --- */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* --- Formulario --- */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+    form input, form textarea, form button {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    form textarea {
+      resize: vertical;
+    }
+    form button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #005a9e;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    /* --- Responsivo --- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      section {
+        padding: 20px 15px;
+      }
+      .banner h2 {
+        font-size: 1.4em;
+      }
+      .banner p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Servicio Técnico de Computadoras</h1>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#modalidad">Modalidad</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Banner destacado -->
+  <section class="banner">
+    <h2>🔧 Servicio Técnico a Domicilio · 🚚 Retiro y Entrega</h2>
+    <p>¡La comodidad de reparar tu PC o notebook sin moverte de tu casa!</p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <div class="card">
+      <h2>Reparación de Computadoras</h2>
+      <p>Ofrecemos reparación de PC y notebooks: instalación de software, limpieza, mejora de rendimiento, recuperación de datos, cambio de repuestos y mucho más.</p>
+    </div>
+  </section>
+
+  <!-- Modalidad -->
+  <section id="modalidad">
+    <div class="card">
+      <h2>Modalidad de Atención (SOLO CABA)</h2>
+      <ul>
+        <li>🏠 Laboratorio de reparación en Saavedra, en Av. Dr Ricardo Balbín, entre Ramallo y Correa.</li>
+        <li>🔧 Reparación en el domicilio del cliente (depende de la falla).</li>
+        <li>🔧 Cotización sin cargo.</li>
+        <li>🔧 Una vez aceptado el presupuesto se pide seña de 20.000 pesos.</li>
+        <li>🔧 Horarios a coordinar.</li>
+        <li>🚚 Retiro del equipo y entrega una vez reparado.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="card">
+      <h2>Contacto</h2>
+      <p>Complete el siguiente formulario y nos comunicaremos a la brevedad:</p>
+
+      <form action="https://formspree.io/f/movlzbpy" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <input type="text" name="telefono" placeholder="Tu teléfono">
+        <textarea name="mensaje" rows="5" placeholder="Describa el problema, tus horarios y zona residencial" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p style="text-align:center; font-size:0.9em; color:#555; margin-top:10px;">
+        ⚠️ Si el botón no funciona, puede escribirnos directamente a: <b>juansanabriaserv.tecnico@gmail.com</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Servicio Técnico de Computadoras - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
