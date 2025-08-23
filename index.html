@@ -214,42 +214,7 @@
                 font-size: 1em;
             }
         }
-       /* --- Imágenes laterales --- */
-.side-images {
-    position: fixed;
-    top: 110px;           /* baja un poco para no tapar el header */
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 10;
-}
-
-.side-images.left { left: 10px; }
-.side-images.right { right: 10px; }
-
-.side-images img {
-    width: 100px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-}
-
-.side-images img:hover {
-    transform: scale(1.1);
-}
-
-/* Deja espacio a los costados para que no tapen el contenido */
-body { 
-    margin-left: 140px;
-    margin-right: 140px; 
-}
-
-/* Responsivo: ocultar en pantallas chicas */
-@media (max-width: 900px) {
-    .side-images { display: none; }
-    body { margin: 0; }
-}
+     
 
     </style>
 </head>
@@ -342,6 +307,7 @@ body {
     </footer>
 </body>
 </html>
+
 
 
 
