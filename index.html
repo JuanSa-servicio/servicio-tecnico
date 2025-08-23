@@ -214,6 +214,27 @@
                 font-size: 1em;
             }
         }
+        /* --- Imágenes laterales --- */
+.side-images {
+    position: fixed;
+    top: 100px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+}
+.side-images.left {
+    left: 10px;
+}
+.side-images.right {
+    right: 10px;
+}
+.side-images img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
     </style>
 </head>
 <body>
@@ -231,21 +252,20 @@
         </nav>
     </header>
 
-    <!-- Imágenes a la izquierda -->
-    <div class="side-images left-images">
-        <img src="img/cpu1.jpg" alt="CPU reparada">
-        <img src="img/cpu2.jpg" alt="PC desarmada">
-        <img src="img/mothers.jpg" alt="Placa madre">
-        <img src="img/anteydespues.jpg" alt="Servicio técnico">
-    </div>
+   <!-- Columnas de imágenes a la izquierda y derecha -->
+<div class="side-images left">
+    <img src="cpu1.jpg" alt="CPU reparada">
+    <img src="cpu2.jpg" alt="CPU abierta">
+    <img src="madres.jpg" alt="Motherboard">
+    <img src="monitormadre.jpg" alt="Monitor y motherboard">
+</div>
 
-    <!-- Imágenes a la derecha -->
-    <div class="side-images right-images">
-        <img src="img/placa notebook.jpg" alt="analisis de mother">
-        <img src="img/placa microscopio.jpg" alt="Microscopio">
-        <img src="img/motherymonitor.jpg" alt="analizando mother">
-        <img src="img/notebook sin pantalla.jpg" alt="Técnico trabajando">
-    </div>
+<div class="side-images right">
+    <img src="cuaderno_sin_pantalla.jpg" alt="Notebook sin pantalla">
+    <img src="placa_microscopio.jpg" alt="Placa bajo microscopio">
+    <img src="placa_notebook.jpg" alt="Placa de notebook">
+    <img src="antesydespues.jpg" alt="Antes y después reparación">
+</div>
 
     <section class="banner">
         <h2>🔧 Reparación de PC y Notebooks · 🚚 Retiro y Entrega</h2>
@@ -306,3 +326,4 @@
     </footer>
 </body>
 </html>
+
