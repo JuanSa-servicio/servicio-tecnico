@@ -10,232 +10,86 @@
     <meta name="google-site-verification" content="nF9-quHxz3Zs4422B2W96Y-QS-oacJE9v493TSz2G1w" />
 
     <style>
-        /* --- Estilos generales --- */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            margin-top: 0;
-        }
-        
-        /* --- Encabezado --- */
-        header {
-            background: #0078d7;
-            color: white;
-            padding: 20px 15px;
-            display: flex; /* Usamos Flexbox para alinear elementos */
-            justify-content: space-between; /* Alinea el logo a la izquierda y el contenido a la derecha */
-            align-items: center; /* Centra verticalmente */
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            max-height: 60px;
-            margin-right: 15px; /* Espacio entre el logo y el texto del encabezado */
-        }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    margin-left: 140px; /* espacio a la izquierda para que no se tape con las imágenes */
+    margin-right: 140px; /* espacio a la derecha */
+  }
 
-        .header-content {
-            text-align: right; /* Alineamos el texto y la nav a la derecha */
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        
-        nav {
-            margin-top: 10px;
-        }
-        
-        nav a {
-            color: white;
-            margin: 0 12px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        nav a:hover {
-            text-decoration: underline;
-        }
-        
-        /* --- Banner destacado --- */
-        .banner {
-            background: #fffae6;
-            padding: 30px 15px;
-            text-align: center;
-            border-bottom: 2px solid #f0d000;
-        }
-        .banner h2 {
-            color: #d48806;
-            margin: 0;
-            font-size: 1.8em;
-        }
-        .banner p {
-            margin-top: 10px;
-            font-size: 1.1em;
-            color: #555;
-        }
-        .banner button {
-            margin-top: 15px;
-            padding: 12px 25px;
-            font-size: 1em;
-            background: #0078d7;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .banner button:hover {
-            background: #005a9e;
-        }
-        
-        /* --- Secciones --- */
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        
-        /* --- Formulario --- */
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: auto;
-        }
-        form input, form textarea, form button {
-            margin-bottom: 15px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1em;
-        }
-        form textarea {
-            resize: vertical;
-        }
-        form button {
-            background: #0078d7;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        form button:hover {
-            background: #005a9e;
-        }
-        
-        /* --- Footer --- */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
+  header {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
 
-        /* --- NUEVO: imágenes laterales --- */
-        .side-images {
-            position: fixed;
-            top: 110px;        /* deja espacio al header */
-            bottom: 0;
-            width: 120px;      /* ancho de la columna */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px;
-            z-index: 1;        /* por detrás del contenido del header */
-        }
-        .side-images img {
-            width: 100px;      /* tamaño de cada imagen */
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            object-fit: cover;
-        }
-        .left-images { left: 0; }
-        .right-images { right: 0; }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #00509e;
+  }
 
-        /* Deja espacio a los costados para que no tapen el contenido */
-        body { 
-            margin-left: 140px;
-            margin-right: 140px; 
-        }
-        
-        /* --- Responsivo --- */
-        @media (max-width: 900px) {
-            .side-images { display: none; }
-            body { margin: 0; }
-        }
+  nav ul li {
+    margin: 0 15px;
+  }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .header-content {
-                text-align: center;
-                margin-top: 10px;
-            }
-            header h1 {
-                font-size: 1.5em;
-            }
-            nav a {
-                display: block;
-                margin: 8px 0;
-            }
-            section {
-                padding: 20px 15px;
-            }
-            .banner h2 {
-                font-size: 1.4em;
-            }
-            .banner p {
-                font-size: 1em;
-            }
-        }
-        /* --- Imágenes laterales --- */
-.side-images {
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  /* 🔹 Estilos para las imágenes fijas */
+  .side-images {
     position: fixed;
-    top: 100px;
-    width: 120px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 15px;
-    z-index: 10;
-}
-.side-images.left {
+    z-index: 1000;
+  }
+
+  .side-images img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .side-images img:hover {
+    transform: scale(1.1);
+  }
+
+  .side-images.left {
     left: 10px;
-}
-.side-images.right {
+  }
+
+  .side-images.right {
     right: 10px;
-}
-.side-images img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-    </style>
+  }
+</style>
+
 </head>
 <body>
     <header>
@@ -326,6 +180,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
