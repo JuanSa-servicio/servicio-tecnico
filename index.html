@@ -1,283 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicio Técnico de Computadoras y Notebooks a Domicilio en CABA</title>
-    <meta name="description" content="Servicio técnico de computadoras y notebooks a domicilio en CABA. Retiro y entrega del equipo reparado, atención rápida y confiable en Saavedra y alrededores.">
-    <meta name="keywords" content="servicio técnico, computadoras, reparación, pc, domicilio, retiro, entrega">
-    <meta name="author" content="Juansa Servicio Técnico">
-    <meta name="google-site-verification" content="nF9-quHxz3Zs4422B2W96Y-QS-oacJE9v493TSz2G1w" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juansa Servicio Técnico</title>
+    <link rel="stylesheet" href="estilos.css">
 
+    <!-- Estilos para las imágenes laterales -->
     <style>
-        /* --- Estilos generales --- */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            margin-top: 0;
-        }
-        
-        /* --- Encabezado --- */
-        header {
-            background: #0078d7;
-            color: white;
-            padding: 20px 15px;
-            display: flex; /* Usamos Flexbox para alinear elementos */
-            justify-content: space-between; /* Alinea el logo a la izquierda y el contenido a la derecha */
-            align-items: center; /* Centra verticalmente */
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            max-height: 60px;
-            margin-right: 15px; /* Espacio entre el logo y el texto del encabezado */
-        }
-
-        .header-content {
-            text-align: right; /* Alineamos el texto y la nav a la derecha */
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        
-        nav {
-            margin-top: 10px;
-        }
-        
-        nav a {
-            color: white;
-            margin: 0 12px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        nav a:hover {
-            text-decoration: underline;
-        }
-        
-        /* --- Banner destacado --- */
-        .banner {
-            background: #fffae6;
-            padding: 30px 15px;
-            text-align: center;
-            border-bottom: 2px solid #f0d000;
-        }
-        .banner h2 {
-            color: #d48806;
-            margin: 0;
-            font-size: 1.8em;
-        }
-        .banner p {
-            margin-top: 10px;
-            font-size: 1.1em;
-            color: #555;
-        }
-        .banner button {
-            margin-top: 15px;
-            padding: 12px 25px;
-            font-size: 1em;
-            background: #0078d7;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .banner button:hover {
-            background: #005a9e;
-        }
-        
-        /* --- Secciones --- */
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        
-        /* --- Formulario --- */
-        form {
+        .side-images {
+            position: fixed;
+            top: 100px;
+            bottom: 0;
+            width: 120px;
             display: flex;
             flex-direction: column;
-            max-width: 500px;
-            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
         }
-        form input, form textarea, form button {
-            margin-bottom: 15px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1em;
+        .side-images img {
+            width: 100px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
-        form textarea {
-            resize: vertical;
+        .left-images {
+            left: 0;
         }
-        form button {
-            background: #0078d7;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
+        .right-images {
+            right: 0;
         }
-        form button:hover {
-            background: #005a9e;
+        body {
+            margin-left: 140px; /* deja espacio para las imágenes */
+            margin-right: 140px;
         }
-        
-        /* --- Footer --- */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
-        
-        /* --- Responsivo --- */
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                text-align: center;
+        @media (max-width: 900px) {
+            .side-images {
+                display: none;
             }
-            .header-content {
-                text-align: center;
-                margin-top: 10px;
-            }
-            header h1 {
-                font-size: 1.5em;
-            }
-            nav a {
-                display: block;
-                margin: 8px 0;
-            }
-            section {
-                padding: 20px 15px;
-            }
-            .banner h2 {
-                font-size: 1.4em;
-            }
-            .banner p {
-                font-size: 1em;
+            body {
+                margin: 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-        <a href="/servicio-tecnico/">
-    <img src="logo2.png" alt="Logo del servicio técnico" width="170">
-      </a>
-            <h1>Servicio Técnico de Pc a domicilio en CABA</h1>
-        </div>
-        <nav>
-            <a href="#servicios">Servicios</a>
-            <a href="#modalidad">Modalidad</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <h1>Juansa Servicio Técnico</h1>
+        <p>Reparación de computadoras, notebooks y más</p>
     </header>
 
-    <section class="banner">
-        <h2>🔧 Reparación de PC y Notebooks· 🚚 Retiro y Entrega</h2>
-        <p>¡La comodidad de reparar tu PC o notebook sin moverte de tu casa!</p>
-        <button onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
-            Solicitar Servicio
-        </button>
-    </section>
+    <!-- Imágenes a la izquierda -->
+    <div class="side-images left-images">
+        <img src="img/cpu1.jpg" alt="CPU reparada">
+        <img src="img/cpu2.jpg" alt="PC desarmada">
+        <img src="img/mothers.jpg" alt="Placa madre">
+        <img src="img/anteydespues.jpg" alt="Servicio técnico">
+    </div>
 
-    <section id="servicios">
-        <div class="card">
-            <h2>Servicios de Reparación</h2>
-            <h3>Instalación y Configuración de Software</h3>
-            <p>Actualización de Windows, instalación de drivers, programas y suites de oficina.</p>
-            <h3>Mantenimiento y Optimización</h3>
-            <p>Limpieza de virus, eliminación de archivos basura y mejora del rendimiento.</p>
-            <h3>Reparación de Hardware</h3>
-            <p>Cambio de discos, memorias, fuentes, y diagnóstico de fallas físicas.</p>
-            <p>Brindamos servicio técnico de computadoras en CABA especializado en reparación de PC y notebooks. Realizamos instalación de software, mantenimiento, recuperación de datos y cambio de repuestos, siempre con atención personalizada.</p>
-        </div>
-    </section>
+    <!-- Imágenes a la derecha -->
+    <div class="side-images right-images">
+        <img src="img/placa notebook.jpg" alt="analisis de mother">
+        <img src="img/placa microscopio.jpg" alt="Microscopio">
+        <img src="img/motherymonitor.jpg" alt="analizando mother">
+        <img src="img/notebook sin pantalla.jpg" alt="Técnico trabajando">
+    </div>
 
-    <section id="modalidad">
-        <div class="card">
-            <h2>Modalidad de Atención (SOLO CABA)</h2>
-            <ul>
-                <li>🏠 Laboratorio de reparación en Saavedra, en Av. Dr Ricardo Balbín, entre Ramallo y Correa.</li>
-                <li>🔧 Reparación en el domicilio del cliente (depende de la falla).</li>
-                <li>🔧 Cotización sin cargo.</li>
-                <li>🔧 Una vez aceptado el presupuesto se pide seña de 20.000 pesos.</li>
-                <li>🔧 Horarios a coordinar.</li>
-                <li>🚚 Retiro del equipo y entrega una vez reparado.</li>
-            </ul>
-        </div>
-    </section>
+    <main>
+        <section>
+            <h2>Servicios</h2>
+            <p>Reparación de hardware, instalación de software, limpieza de virus, mantenimiento preventivo y más.</p>
+        </section>
 
-    <section id="contacto">
-        <div class="card">
+        <section>
             <h2>Contacto</h2>
-            <p>Complete el siguiente formulario y nos comunicaremos a la brevedad:</p>
-            <form action="https://formspree.io/f/movlzbpy" method="POST">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo" required>
-                <input type="text" name="telefono" placeholder="Tu teléfono">
-                <textarea name="mensaje" rows="5" placeholder="Describa el problema, tus horarios y zona residencial" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <p style="text-align:center; font-size:0.9em; color:#555; margin-top:10px;">
-                ⚠️ Si el botón no funciona, puede escribirnos directamente a: <b>juansanabriaserv.tecnico@gmail.com</b>
-            </p>
-        </div>
-    </section>
+            <p>Envíanos un correo a <a href="mailto:juansa.servicio@gmail.com">juansa.servicio@gmail.com</a></p>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Servicio Técnico de Pc - Todos los derechos reservados</p>
-        <p>📍 Saavedra, CABA - Av. Dr Ricardo Balbín, entre Ramallo y Correa</p>
-        <p>📧 juansanabriaserv.tecnico@gmail.com</p>
+        <p>© 2025 Juansa Servicio Técnico</p>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
